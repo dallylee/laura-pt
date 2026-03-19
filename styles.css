@@ -979,17 +979,31 @@ ul {
 .about-highlights {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px 30px;
+    gap: 18px 34px;
     margin: 34px 0 38px;
 }
 
 .about-highlights li {
-    padding: 0 0 14px;
-    border-radius: 0;
+    position: relative;
+    padding: 0 0 0 26px;
+    font-size: 1.04rem;
+    font-weight: 500;
+    color: var(--color-text);
     background: transparent;
     border: 0;
-    border-bottom: 1px solid rgba(23, 23, 23, 0.1);
     box-shadow: none;
+}
+
+.about-highlights li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--color-gold-strong);
+    box-shadow: 0 0 0 5px rgba(199, 170, 127, 0.14);
 }
 
 .reviews-summary {
