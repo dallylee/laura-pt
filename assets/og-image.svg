@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Laura Campos Personal Training social preview placeholder</title>
+  <desc id="desc">A temporary Open Graph image for the Laura Campos static homepage build.</desc>
+  <defs>
+    <linearGradient id="bg" x1="130" y1="40" x2="1040" y2="590" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#171717" />
+      <stop offset="1" stop-color="#27231f" />
+    </linearGradient>
+    <linearGradient id="accent" x1="150" y1="90" x2="1060" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dec29c" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#b79466" stop-opacity="0.45" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1030" cy="130" r="210" fill="url(#accent)" opacity="0.14" />
+  <circle cx="170" cy="530" r="180" fill="url(#accent)" opacity="0.08" />
+  <rect x="82" y="74" width="1036" height="482" rx="38" fill="none" stroke="#f7f2ea" stroke-opacity="0.12" />
+  <rect x="118" y="110" width="470" height="410" rx="34" fill="#f7f2ea" fill-opacity="0.07" stroke="#f7f2ea" stroke-opacity="0.12" />
+  <text x="650" y="200" fill="#c7aa7f" font-size="30" font-family="'DM Sans', sans-serif" letter-spacing="8">LONDON PERSONAL TRAINING</text>
+  <text x="650" y="300" fill="#f7f2ea" font-size="84" font-family="'Cormorant Garamond', Georgia, serif">Laura Campos</text>
+  <text x="650" y="378" fill="#f7f2ea" font-size="46" font-family="'Cormorant Garamond', Georgia, serif">Personal Training That Delivers</text>
+  <text x="650" y="430" fill="#f7f2ea" font-size="46" font-family="'Cormorant Garamond', Georgia, serif">Real Results</text>
+  <text x="650" y="494" fill="#f7f2ea" fill-opacity="0.72" font-size="26" font-family="'DM Sans', sans-serif">Personalised coaching, nutrition support, and gym or at-home sessions.</text>
+  <path d="M242 200v200h136" fill="none" stroke="#dec29c" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M294 224h156v84" fill="none" stroke="#dec29c" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M405 390l52-52m0 0H404m53 0v-53" fill="none" stroke="#dec29c" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
