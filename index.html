@@ -52,15 +52,20 @@
 
     <main id="main-content">
         <section class="hero section" id="home">
+            <div class="hero__media" aria-hidden="true">
+                <img class="hero__image" src="assets/hero-main.jpg" alt="">
+            </div>
+            <div class="hero__overlay"></div>
+
             <div class="container hero__inner">
-                <div class="hero__content reveal">
-                    <p class="eyebrow">London personal training</p>
-                    <h1>Personal Training That Delivers Real Results</h1>
-                    <p class="hero__lede">
+                <div class="hero__content">
+                    <p class="eyebrow hero__overline">London personal training</p>
+                    <h1 class="hero__title">Personal Training That Delivers Real Results</h1>
+                    <p class="hero__lede hero__subtitle">
                         Tailored 1-to-1 coaching, expert guidance, and practical nutrition support, in the gym or at your home.
                     </p>
 
-                    <div class="hero__actions">
+                    <div class="hero__actions hero__cta">
                         <a class="btn btn--primary" href="#contact" data-link-key="whatsapp">Book via WhatsApp</a>
                         <a class="btn btn--secondary" href="#services">View Services</a>
                     </div>
@@ -68,6 +73,11 @@
                     <p class="hero__proof-line">
                         Rated 5 stars on Google Maps, based in London, with coaching in the gym or at home.
                     </p>
+                </div>
+
+                <div class="hero__scroll" aria-hidden="true">
+                    <div class="hero__scroll-line"></div>
+                    <span class="hero__scroll-text">Discover</span>
                 </div>
             </div>
         </section>

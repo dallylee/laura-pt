@@ -9,16 +9,17 @@ const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
 const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
+const anchorLinks = document.querySelectorAll("a[href]");
 const pendingLinks = document.querySelectorAll("[data-link-key]");
-const revealElements = document.querySelectorAll(".reveal");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const revealElements = document.querySelectorAll(".reveal, .animate-on-scroll");
 
 function syncHeaderState() {
     if (!header) {
         return;
     }
 
-    header.classList.toggle("is-scrolled", window.scrollY > 24);
+    header.classList.toggle("is-scrolled", window.scrollY > 100);
+    header.classList.toggle("scrolled", window.scrollY > 100);
 }
 
 function closeMenu() {
@@ -63,13 +64,6 @@ function configureLinks() {
 }
 
 function observeReveals() {
-    if (reduceMotion) {
-        revealElements.forEach((element) => {
-            element.classList.add("is-visible");
-        });
-        return;
-    }
-
     const observer = new IntersectionObserver((entries, currentObserver) => {
         entries.forEach((entry) => {
             if (!entry.isIntersecting) {
@@ -77,11 +71,12 @@ function observeReveals() {
             }
 
             entry.target.classList.add("is-visible");
+            entry.target.classList.add("visible");
             currentObserver.unobserve(entry.target);
         });
     }, {
-        rootMargin: "0px 0px -10% 0px",
-        threshold: 0.15
+        rootMargin: "0px 0px -100px 0px",
+        threshold: 0.1
     });
 
     revealElements.forEach((element) => {
@@ -109,6 +104,34 @@ menuToggle?.addEventListener("click", () => {
 navLinks.forEach((link) => {
     link.addEventListener("click", () => {
         closeMenu();
+    });
+});
+
+anchorLinks.forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+        const href = anchor.getAttribute("href");
+
+        if (!href || !href.startsWith("#") || href === "#") {
+            return;
+        }
+
+        const target = document.querySelector(href);
+
+        if (!target) {
+            return;
+        }
+
+        event.preventDefault();
+        closeMenu();
+
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
     });
 });
 
